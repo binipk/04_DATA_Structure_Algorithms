@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/chap01-data-structures.iml" filepath="$PROJECT_DIR$/.idea/chap01-data-structures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chap01-data-structures.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chap01-data-structures.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chap01-data-structures.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chap01-data-structures.test.iml" />
+    </modules>
+  </component>
+</project>

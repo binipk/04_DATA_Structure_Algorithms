@@ -1,33 +1,28 @@
 package com.ohgiraffers.section03.stack;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 public class Practice1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    // 실제로 코드를 구현
+    public String solution(String input) {
 
-        int T = sc.nextInt();
-        sc.nextLine();  // 개행 처리
-
-        for (int i = 0; i < T; i++) {
-            String str = sc.nextLine();
-            System.out.println(isVPS(str) ? "YES" : "NO");
-        }
-    }
-
-    public static boolean isVPS(String str) {
         Stack<Character> stack = new Stack<>();
-
-        for (char ch : str.toCharArray()) {
-            if (ch == '(') {
-                stack.push(ch);
-            } else if (ch == ')') {
-                if (stack.isEmpty()) return false;
+        for(char c : input.toCharArray()) {
+            if(c == '(') {
+                // 여는 괄호인 경우 stack에 push
+                stack.push(c);
+            } else {
+                // 스택이 비어서 괄호를 꺼낼 수 없다면 여는 괄호가 부족해서 짝이 안 맞는 상황
+                if(stack.isEmpty()) return "NO";
+                // 닫는 괄호인 경우 stack에서 pop
                 stack.pop();
             }
         }
 
-        return stack.isEmpty();
+        // 모든 문자에 대해서 처리 했는데 스택에 여는 괄호가 남아있다는 것은 닫는 괄호가 부족해서 짝이 안 맞는 상황
+        if(!stack.isEmpty()) return "NO";
+
+        return "YES";
     }
+
 }
