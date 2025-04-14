@@ -32,10 +32,11 @@ public class Application {
 
         // 요소 제거
         list.remove(2);
+        System.out.print("check: ");
         System.out.println(list);
 
         // 리스트 크기
-        System.out.println(list.size());
+        System.out.println("size(): " + list.size());
 
         /* LinkedList */
         List<Integer> list2 = new LinkedList<>();
