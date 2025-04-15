@@ -1,4 +1,4 @@
-package com.ohgiraffers.section03.stack;
+package com.ohgiraffers.section05.deque;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,32 +10,31 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-/* 쇠막대기 백준(10799)
-* https://www.acmicpc.net/problem/10799
+/* 풍선 터트리기 - 백준(2346)
+* https://www.acmicpc.net/problem/2346
 * */
-class Practice2Tests {
-
-    Practice2 practice2;
+class Practice1Tests {
+    Practice1 practice1;
 
     @BeforeEach
     void setUp() {
-        practice2 = new Practice2();
+        practice1 = new Practice1();
     }
 
     static Stream<Arguments> provideTestCases() {
         return Stream.of(
-                arguments("()(((()())(())()))(())", 17),
-                arguments("(((()(()()))(())()))(()())", 24)
+                Arguments.arguments(new Integer[]{3, 2, 1, -3, -1}, "1 4 5 3 2"),
+                Arguments.arguments(new Integer[]{2, 1, -3, -1}, "1 3 2 4"),
+                Arguments.arguments(new Integer[]{-1, 2, 1}, "1 3 2")
         );
     }
 
-    @DisplayName("쇠막대기 문제 테스트")
+    @DisplayName("풍선 터트리기 테스트")
     @ParameterizedTest
     @MethodSource("provideTestCases")
-    void testSolution(String input, int expected) {
-        int result = practice2.solution(input);
+    void testSolution(Integer[] notes, String expected) {
+        String result = practice1.solution(notes);
         Assertions.assertEquals(expected, result);
     }
 }
