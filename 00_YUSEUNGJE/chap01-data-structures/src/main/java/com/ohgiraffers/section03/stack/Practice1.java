@@ -1,5 +1,6 @@
 package com.ohgiraffers.section03.stack;
 
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Practice1 {

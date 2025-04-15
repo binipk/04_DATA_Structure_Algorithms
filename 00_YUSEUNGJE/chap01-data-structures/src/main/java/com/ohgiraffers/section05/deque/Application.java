@@ -19,6 +19,7 @@ public class Application {
         deque.addFirst(5);
 
         System.out.println(deque);
+        System.out.println(deque.size());
 
         // 요소 확인
         System.out.println(deque.getFirst());

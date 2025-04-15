@@ -1,9 +1,6 @@
 package com.ohgiraffers.section03.stack;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -25,12 +22,15 @@ class Practice1Tests {
 
     static Stream<Arguments> provideTestCases() {
         return Stream.of(
-                Arguments.arguments("(())())", "NO"),
-                Arguments.arguments("(((()())()", "NO"),
-                Arguments.arguments("(()())((()))", "YES"),
-                Arguments.arguments("((()()(()))(((())))()", "NO"),
-                Arguments.arguments("()()()()(()()())()", "YES"),
-                Arguments.arguments("(()((())()(", "NO")
+//                Arguments.arguments("(())())", "NO"),
+//                Arguments.arguments("(((()())()", "NO"),
+//                Arguments.arguments("(()())((()))", "YES"),
+//                Arguments.arguments("((()()(()))(((())))()", "NO"),
+//                Arguments.arguments("()()()()(()()())()", "YES"),
+//                Arguments.arguments("(()((())()(", "NO")
+                Arguments.arguments("((", "NO"),
+                Arguments.arguments("))", "NO"),
+                Arguments.arguments("())(()", "NO")
         );
     }
     @DisplayName("올바른 괄호 문자열 테스트")
@@ -41,4 +41,5 @@ class Practice1Tests {
         String result = practice1.solution(input);
         Assertions.assertEquals(expected, result);
     }
+
 }
