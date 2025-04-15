@@ -10,9 +10,21 @@ public class C_InsertionSort {
      * 적은 데이터나 거의 정렬된 데이터에서 효율적으로 동작한다.
      * */
     public static void solution(int[] arr) {
+        // 34, 23, 5, 24, 1, 9, 12
 
         for (int i = 1; i < arr.length; i++) {
             System.out.println((i + 1) + " 번째 : " + Arrays.toString(arr));
+
+            int temp = arr[i]; // 중간에 삽입될 값
+
+            int j;
+            for (j = i - 1; j >= 0; j--) {
+                // i 인덱스보다 앞으로 인덱스를 탐색하면서 기준 값 보다 큰 경우 뒤로 하나씩 인덱스를 밀어낸다.
+                if (arr[j] > temp) arr[j + 1] = arr[j];
+                else break;
+            }
+            // 반복문을 빠져나왔다는 것은 적절한 삽입 위치를 찾았다는 의미이므로 temp를 삽입한다.
+            arr[j + 1] = temp;
         }
 
 

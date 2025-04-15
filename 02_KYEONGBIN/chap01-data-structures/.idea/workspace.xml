@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dcfb8193-1eb4-4c62-b8d3-dadafe549525" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-algorithms/src/main/java/com/ohgiraffers/section01/sorting/C_InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chap02-algorithms/src/main/java/com/ohgiraffers/section01/sorting/C_InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-algorithms/src/test/java/com/ohgiraffers/section01/sorting/A_BubbleSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chap02-algorithms/src/test/java/com/ohgiraffers/section01/sorting/A_BubbleSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-algorithms/src/test/java/com/ohgiraffers/section01/sorting/C_InsertionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chap02-algorithms/src/test/java/com/ohgiraffers/section01/sorting/C_InsertionSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

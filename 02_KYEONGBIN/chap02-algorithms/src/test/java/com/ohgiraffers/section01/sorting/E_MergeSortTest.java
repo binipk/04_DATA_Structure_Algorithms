@@ -9,31 +9,28 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-class C_InsertionSortTests {
+class E_MergeSortTest {
 
-    static int[] act1, act2, exp1, exp2;
+    static int[] act, exp;
 
     @BeforeAll
     static void setUp() {
-        act1 = new int[] {34, 23, 5, 24, 1, 9, 12};
-        exp1 = new int[] {1, 5, 9, 12, 23, 24, 34};
-        act2 = new int[] {40, 47, 38, 8, 33, 35};
-        exp2 = new int[] {8, 33, 35, 38, 40, 47};
+        act = new int[] {42, 32, 24, 60, 15, 5, 90, 45};
+        exp = new int[] {5, 15, 24, 32, 42, 45, 60, 90};
     }
 
     static Stream<Arguments> provideAscendingSource() {
         return Stream.of(
-                Arguments.of(act1, exp1),
-                Arguments.of(act2, exp2)
+                Arguments.of(act, exp)
         );
     }
 
-    @DisplayName("삽입 정렬 테스트")
+    @DisplayName("병합 정렬 테스트")
     @ParameterizedTest
     @MethodSource("provideAscendingSource")
-    void testInsertionSort(int[] actual, int[] expected) {
-        C_InsertionSort.solution(actual);
+    void testMergeSort(int[] actual, int[] expected) {
+        E_MergeSort.solution(actual);
         Assertions.assertArrayEquals(expected, actual);
-
     }
+
 }
