@@ -1,5 +1,12 @@
 package com.ohgiraffers.section01.sorting;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
 /* 수업목표. 버블정렬을 이해할 수 있다. */
 /* 필기.
  *  정렬 알고리즘
@@ -37,4 +44,48 @@ public class A_BubbleSort {
      *   예시 출력 2
      *     - 8 33 35 38 40 47
      * */
+
+    public static void main(String[] args) {
+
+        /* 입력 데이터 받기 */
+//        Scanner sc = new Scanner(System.in);
+//        int length = sc.nextInt();
+//        int[] arr = new int[length];
+//        for (int i = 0; i < length; i++) {
+//            arr[i] = sc.nextInt();
+//        }
+//
+//        System.out.println("length = " + length);
+//        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+
+            int length = Integer.parseInt(br.readLine());
+
+            IntStream intStream = Arrays.stream(br.readLine().split(" ")).mapToInt(x -> Integer.parseInt(x));
+            int[] arr = intStream.toArray();
+
+            // 알고리즘 실행
+            solution(length, arr);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void solution(int length, int[] arr) {
+
+        for(int i = 0; i < length - 1; i++) {
+            System.out.println((i + 1) + " " + Arrays.toString(arr));
+            for(int j = 0; j < length - 1 - i; j++) {
+                if(arr[j] > arr[j + 1]) { // 오름차순
+               // if(arr[j] < arr[j + 1]) { // 내림차순
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
 }
