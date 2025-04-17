@@ -24,7 +24,11 @@ class Practice1Tests {
                 Arguments.arguments("(()())((()))", "YES"),
                 Arguments.arguments("((()()(()))(((())))()", "NO"),
                 Arguments.arguments("()()()()(()()())()", "YES"),
-                Arguments.arguments("(()((())()(", "NO")
+                Arguments.arguments("(()((())()(", "NO"),
+                Arguments.arguments("())(()", "NO"),
+                Arguments.arguments("((", "NO"),
+                Arguments.arguments("))", "NO"),
+                Arguments.arguments("())(()", "NO")
         );
     }
 
